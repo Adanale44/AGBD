@@ -25,10 +25,19 @@ select * from get_fit_now_check_in
 where membership_id like "48Z%"
 
 --LOs dos culpables
-select * from get_fit_now_meber
+select * from get_fit_now_member
  where membership_status = "gold" and id like "48Z"
 
+--join con person y drivers_license
+select * from drivers_license d
+join person p on d.id = p.license_id
+where plate_number like "%H42W%"
 
+--persona encontrada
+select p.name, g.person_id from get_fit_now_member g
+join person p on g.person_id = p.id
+join drivers_license d on d.id = p.license_id
+where membership_status = "gold" and g.id like "48Z%" and plate_number like "%H42W%"
 
 
               
