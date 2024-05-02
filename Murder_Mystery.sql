@@ -39,5 +39,28 @@ join person p on g.person_id = p.id
 join drivers_license d on d.id = p.license_id
 where membership_status = "gold" and g.id like "48Z%" and plate_number like "%H42W%"
 
+--interrogatorio del asesino 
+select * from interview
+where person_id = "67318" 
+--I was hired by a woman with a lot of money. 
+-- I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). 
+-- She has red hair and she drives a Tesla Model S. 
+-- I know that she attended the SQL Symphony Concert 3 times in December 2017. 
+
+--DESCUBIRNEDO A la autora del crimen
+-- Miranda Priestly
+select f.person_id, p.name, COUNT(*) AS veces from drivers_license d
+join person p on p.license_id = d.id
+join facebook_event_checkin f on p.id = f.person_id
+where 
+hair_color = "red" and height between 65 and 67
+and car_model like "%Model S%" and car_make like "%Tesla%" and 
+f.event_name = "SQL Symphony Concert" and f.date like "201712%"
+GROUP BY p.id
+HAVING veces = 3
+
+
+
+              
 
               
