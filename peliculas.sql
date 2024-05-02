@@ -23,3 +23,8 @@ GROUP by p.country_id
 ORDER by cant_city DESC
 
 -------6
+SELECT count(*) as cant_city, p.country FROM country p
+join city c on p.country_id = c.country_id
+GROUP by p.country_id
+ORDER by cant_city DESC
+HAVING cant_city = 2

@@ -47,7 +47,7 @@ where person_id = "67318"
 -- She has red hair and she drives a Tesla Model S. 
 -- I know that she attended the SQL Symphony Concert 3 times in December 2017. 
 
---DESCUBIRNEDO A la autora del crimen
+--DESCUBIR A la autora del crimen
 -- Miranda Priestly
 select f.person_id, p.name, COUNT(*) AS veces from drivers_license d
 join person p on p.license_id = d.id
@@ -57,10 +57,4 @@ hair_color = "red" and height between 65 and 67
 and car_model like "%Model S%" and car_make like "%Tesla%" and 
 f.event_name = "SQL Symphony Concert" and f.date like "201712%"
 GROUP BY p.id
-HAVING veces = 3
-
-
-
-              
-
-              
+HAVING veces = 3             
