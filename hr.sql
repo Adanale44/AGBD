@@ -12,3 +12,7 @@ SELECT e.first_name as empleados, m.first_name as managers from employees e
 join employees m on m.employee_id = e.employee_id
 ORDER by managers ASC
 
+--4
+SELECT e.first_name as nombre, e.last_name as apellido, d.first_name as hijo from employees e 
+join dependents d on e.employee_id = d.employee_id
+ORDER by hijo ASC
