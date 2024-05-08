@@ -6,3 +6,6 @@ order by d.department_name asc
 SELECT DISTINCT salary from employees 
 ORDER by salary desc
 ----3
+SELECT DISTINCT job_title, max_salary, min_salary from jobs
+WHERE job_title like "%Manager"
+order by max_salary DESC, min_salary DESC
