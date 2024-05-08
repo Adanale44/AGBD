@@ -13,3 +13,8 @@ order by max_salary DESC, min_salary DESC
 SELECT DISTINCT r.region_name as region , c.country_name as pais from regions r
 join countries c on c.region_id = r.region_id
 ORDER by region_name ASC
+------5
+SELECT e.first_name, e.last_name, e.salary, d.department_name  from employees e
+join departments d on d.department_id = e.department_id
+where e.salary between 9000 and 17000
+ORDER by salary DESC
