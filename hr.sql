@@ -21,3 +21,8 @@ ORDER by hijo ASC
 SELECT e.first_name, e.last_name, e.salary, j.job_title  from employees e
 join jobs j on j.job_id = e.job_id
 ORDER by salary DESC
+
+--6
+SELECT e.first_name, e.last_name, d.department_name, e.salary from employees e
+join departments d on d.department_id = e.department_id
+ORDER by d.department_name DESC
