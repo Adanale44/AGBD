@@ -17,7 +17,7 @@ SELECT e.first_name as nombre, e.last_name as apellido, d.first_name as hijo fro
 join dependents d on e.employee_id = d.employee_id
 ORDER by hijo ASC
 
---5 incompleto 
-SELECT e.first_name, e.salary, j.job_title from employees e
-join jobs j on e.job_id = j.job_id
-where salary desc 
+--5
+SELECT e.first_name, e.last_name, e.salary, j.job_title  from employees e
+join jobs j on j.job_id = e.job_id
+ORDER by salary DESC
