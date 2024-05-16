@@ -40,3 +40,8 @@ JOIN locations l on l.location_id = d.location_id
 JOIN countries c on c.country_id = l.country_id
 JOIN regions r on r.region_id = c.region_id
 ORDER by c.country_name ASC
+
+--9
+SELECT c.country_name, r.region_name FROM countries c
+JOIN regions r on r.region_id = c.region_id
+ORDER by c.country_name DESC
