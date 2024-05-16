@@ -25,4 +25,9 @@ ORDER by salary DESC
 --6
 SELECT e.first_name, e.last_name, d.department_name, e.salary from employees e
 join departments d on d.department_id = e.department_id
-ORDER by d.department_name DESC
+ORDER by d.department_name ASC
+
+--7
+SELECT l.street_address,l.postal_code, e.first_name FROM employees e 
+JOIN departments d on d.department_id = e.department_id
+JOIN locations l on l.location_id = d.location_id
