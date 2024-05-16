@@ -45,3 +45,8 @@ ORDER by c.country_name ASC
 SELECT c.country_name, r.region_name FROM countries c
 JOIN regions r on r.region_id = c.region_id
 ORDER by c.country_name DESC
+
+--10
+SELECT e.first_name, e.last_name, j.min_salary, j.job_title FROM employees e
+JOIN jobs j on j.job_id = e.job_id
+ORDER by first_name asc
