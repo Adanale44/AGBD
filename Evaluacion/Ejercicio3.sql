@@ -1,3 +1,3 @@
-SELECT m.membership_status, g.membership_id from get_fit_now_member m
-JOIN get_fit_now_check_in g on g.membership_id = m.id
-where m.membership_status is NULL
+SELECT p.name, g.membership_status from person p 
+LEFT JOIN get_fit_now_member g on g.person_id = p.id
+WHERE membership_status is NULL
