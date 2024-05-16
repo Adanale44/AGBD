@@ -28,6 +28,15 @@ join departments d on d.department_id = e.department_id
 ORDER by d.department_name ASC
 
 --7
-SELECT l.street_address,l.postal_code, e.first_name FROM employees e 
+SELECT l.state_province, e.first_name FROM employees e 
 JOIN departments d on d.department_id = e.department_id
 JOIN locations l on l.location_id = d.location_id
+ORDER by l.state_province ASC
+
+--8
+SELECT e.first_name, e.last_name, c.country_name, r.region_name FROM employees e 
+JOIN departments d on d.department_id = e.department_id
+JOIN locations l on l.location_id = d.location_id
+JOIN countries c on c.country_id = l.country_id
+JOIN regions r on r.region_id = c.region_id
+ORDER by c.country_name ASC
