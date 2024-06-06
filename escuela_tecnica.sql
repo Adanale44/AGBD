@@ -63,4 +63,6 @@ INSERT INTO Profesor(apellido,nombre)
 VALUES ("Corvalan","Adrián"),("Cuneo","Guillermo")
 
 --Cambiar los viejos profesores por los nuevos
+INSERT INTO Profesor(apellido,nombre)
+VALUES ("Corvalan","Adrián"),("Cuneo","Guillermo")
 
